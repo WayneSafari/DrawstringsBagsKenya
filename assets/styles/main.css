@@ -1,0 +1,367 @@
+#body {
+  background-color: #E8DBE5;
+  height: 250px;
+}
+.footer .container {
+  width: 100%;
+  margin: auto;
+}
+.footer {
+  background-color: #621B5F;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Moderat", sans-serif;
+  font-size: 20px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  text-decoration: underline;
+}
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  z-index: -1; /* Set the z-index to position the video behind other elements */
+}
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #621B5F;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.chat-toggle img {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+/* Add hover effect */
+.chat-toggle:hover {
+  transform: scale(1.2) rotate(720deg); /* Enlarge and spin twice */
+}
+
+.chat-toggle:hover img {
+  transform: scale(1.2) rotate(720deg); /* Enlarge and spin twice */
+}
+
+.chat-container {
+  position: fixed;
+  top: 58%;
+  right: 20px;
+  transform: translateY(-50%);
+  max-width: 400px;
+  padding: 20px;
+  border: 0px solid #E8DBE5;
+  border-radius: 50px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide chat container by default */
+  font-family: "Moderat", sans-serif;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.chat-box {
+  height: 200px; /* Reduce height to make space for text box */
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 10px solid #3e113c;
+  border-radius: 30px;
+  background-color:  #3e113c;
+  overflow-y: auto;
+}
+.chat-box::-webkit-scrollbar {
+  display: none;
+}
+.chat-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chat-message.bot-message {
+  justify-content: flex-start;
+}
+
+.chat-message.user-message {
+  justify-content: flex-end;
+}
+
+.message-text {
+  background-color: #f0f0f0; /* Background color for message */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px; /* Padding for text */
+  max-width: 70%; /* Max width for message */
+}
+
+.message-text p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+.message-icon {
+  width: 20px; /* Adjust icon width */
+  height: 20px; /* Adjust icon height */
+  border-radius: 50%; /* Make icon circular */
+  margin-left: 10px; /* Add spacing between text and icon */
+}
+.chat-message-image {
+  width: 40px; /* Adjust image width as needed */
+  height: 40px; /* Adjust image height as needed */
+  border-radius: 50%; /* Make image circular */
+  margin-right: 10px; /* Add spacing between image and text */
+}
+.user-input[type="text"] {
+  width: 70%; /* Adjust width */
+  height: 100%;
+  padding: 10px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin to separate from send button */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #621B5F;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e113c;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Style for the logo */
+.contacts-db-logo-1 {
+  margin-right: 10px;
+  opacity: 10;
+}
+
+.contacts-db-logo-1 img {
+  height: 100px;
+  width: auto;
+  margin-right: 100px; /* Adjust the spacing between the logo and the first link */
+}
+
+/* Style for the links inside the navbar */
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-family: "Moderat", sans-serif;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Ensure equal spacing between links */
+.navbar a + a {
+  margin-left: 100px; /* Adjust the spacing between links */
+}
+
+/* Add a hover effect */
+.navbar a::before {
+  content: ''; /* Create an empty pseudo-element */
+  position: absolute; /* Position the pseudo-element */
+  top: 0; /* Start the effect from the top of the link */
+  left: 0;
+  width: 100%;
+  height:0; /* Initially, the height is zero */
+  background-color: rgb(255, 255, 255); /* Background color with opacity */
+  border-radius: 5px; /* Rounded corners */
+  transition: height 0.3s; /* Smooth transition for the height property */
+  z-index: -1; /* Ensure the pseudo-element is behind the link text */
+}
+
+/* Increase height on hover */
+.navbar a:hover::before {
+  height: 100%; /* Increase the height to cover the link */
+}
+  
+ /* Style the content for each page */
+.page {
+    display: none; /* Hide all pages by default */
+    padding: 20px;
+  }
+  /* Show only the content of the home page by default */
+  #page1 {
+    display: block;
+  }
+  .home .rectangle-2 {
+    opacity: 0.6;
+    background: #000000;
+    position: absolute;
+    left: 537px;
+    top: 0px;
+    width: 126px;
+    height: 163px;
+  }
+  .page .we-make-customized-drawstring-backpacks {
+    margin: 0 11.9px 6px 33.9px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: "Moderat", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #000000;
+  }
+  .page .we-make-customized-drawstring-backpacks {
+    margin: 0 11.9px 6px 33.9px;
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: "Moderat", sans-serif;
+    font-weight: 500; /* Change font weight to medium */
+    font-size: 30px;
+    color: black; /* Set color to black */
+  }
+  
+  .we-make-customized-drawstring-backpacks-sub40 {
+    font-family: "Moderat", sans-serif;
+    font-weight: 500; /* Maintain font weight */
+    font-size: 30px; /* Set the same font size as "We Make" */
+    line-height: 1.333;
+    color: #621B5F; /* Set color to purple */
+  }
+  
+ .we-make-customized-drawstring-backpacks-sub41 {
+    font-family: "Moderat", sans-serif;
+    font-weight: bold; /* Bolden font */
+    font-size: 36px;
+    line-height: 1.333;
+    color: #621B5F;
+  }
+  .page .youll-want-to-use-everyday {
+    margin: 0 0 140px 28px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: "Moderat", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+  }
+  .page .corporate-giveaways-csr-ngo-projects-dignity-kit-packaging-campaigns-product-brand-awareness-end-year-promos {
+    text-align: center;
+    overflow-wrap: inherit;
+    font-family: "Moderat", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+  }
+
+  .page .xmlid-71 {
+    margin-right: 7.9px;
+    width: 94.9px;
+    height: 94.9px;
+  }
+  .page .xmlid-48 {
+    margin: 16.5px 0 3.7px 0;
+    width: 215.7px;
+    height: 44.7px;
+  }
+  .page .container-1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .page-1 {
+    background: #000000;
+    display: flex;
+    padding: 0px 0px 0px 0px;
+    width: 1440px;
+    box-sizing: border-box;
+  }
+  .page .container-2 {
+    margin: 0 75.7px 157.6px 40.8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1241.4px;
+    box-sizing: border-box;
+  }
+  .container-3 {
+    margin: 192px 0 109px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    color: #621B5F;
+    font-family: "Moderat", sans-serif;
+  }
+  .container-8 {
+    margin: 12px 0 19px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    color: #621B5F;
+    font-family: "Tomato Grotesk", sans-serif;
+    font-size: 40px;
+
+  }
+  .page .container-4 {
+    margin-right: 20.1px;
+    width: 700px;
+    height: 700px;
+    animation: levitate 10s infinite alternate; /* Apply the animation */
+  }
+  
+  @keyframes levitate {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50px); /* Adjust the distance and direction of the levitation */
+    }
+  }
+  .page .container-6 {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  
+
