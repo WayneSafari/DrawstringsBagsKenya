@@ -13,3 +13,5 @@ function showPage(pageName) {
       console.error('Page not found:', pageName);
     }
   }
+// Show the home page by default
+showPage('page1');
