@@ -61,55 +61,50 @@
             </div>
         </div>        
     </div>
-    <!-- Content for Page 2 (About us Page) -->
+    <!-- Content for Page 2 (Products Page) -->
     <div id="page2" class="page">
       <div class="products">
-        <img class="vector" src="assets/images/drawstringbagproduct1.jpg" />
-        <div class="rectangle-2">
+        <div class="carousel">
+          <div class="carousel-container">
+            <div class="carousel-item active" style="background-image: url('assets/images/drawstringbagproduct1.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('assets/images/drawstringbagproduct2.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('assets/images/drawstringbagproduct3.jpg');"></div>
+          </div>
+          <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
         </div>
-        <div class="container-4">
-          <div class="container-3">
-            <div class="container-1">
-              <div class="container-5">
-                <div class="logo-icon-removebg-preview-5">
-                </div>
+        
+        <div class="tile-section">
+          <button class="tile-button up" onclick="moveTiles(-1)">&#9650;</button>
+          <div class="tiles">
+            <div class="tile" style="background-image: url('assets/images/drawstringbagproduct4.jpg');">
+              <div class="tile-content">
+                <h2>Tile 1</h2>
+                <p>Description for tile 1.</p>
               </div>
             </div>
-            <div class="rectangle-12">
+            <div class="tile" style="background-image: url('assets/images/drawstringbagproduct5.jpg');">
+              <div class="tile-content">
+                <h2>Tile 2</h2>
+                <p>Description for tile 2.</p>
+              </div>
             </div>
+            <div class="tile" style="background-image: url('assets/images/drawstringbagproduct6.jpg');">
+              <div class="tile-content">
+                <h2>Tile 3</h2>
+                <p>Description for tile 3.</p>
+              </div>
+            </div>
+            <!-- Add more tiles as needed -->
           </div>
-          <div class="container-6">
-            <div class="rectangle-4">
-              <img src="assets/images/drawstringbagproduct2.jpg" />
-            </div>
-            <div class="rectangle-5">
-              <img src="assets/images/drawstringbagproduct2.jpg" />
-            </div>
-            <div class="container-7">
-              <div class="rectangle-9">
-                <img src="assets/images/drawstringbagproduct2.jpg" />
-              </div>
-              <div class="logo-icon-removebg-preview-2">
-              </div>
-            </div>
-            <div class="container">
-              <div class="rectangle-10">
-                <img src="assets/images/drawstringbagproduct2.jpg" />
-              </div>
-              <div class="logo-icon-removebg-preview-3">
-              </div>
-            </div>
-            <div class="container-2">
-              <div class="rectangle-11">
-                <img src="assets/images/drawstringbagproduct2.jpg" />
-              </div>
-              <div class="logo-icon-removebg-preview-4">
-              </div>
-            </div>
-          </div>
+          <button class="tile-button down" onclick="moveTiles(1)">&#9660;</button>
         </div>
       </div>
-   </div>
+          
+        
+          <!-- Add more tiles as needed -->
+    </div>
+      </div>
        <!-- Content for Page 3 (About us Page) -->
        <div id="page3" class="page">
             <h2>Welcome to the Home Page</h2>

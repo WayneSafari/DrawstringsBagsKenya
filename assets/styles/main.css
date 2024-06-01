@@ -377,222 +377,118 @@ button:hover {
   }
   #page2 {
     display: block; /* Show the products page */
-    background-color: #E8DBE5;
 }
 
 .products {
-  background: #E8DBE5;
   display: flex;
   padding: 69.5px 0 123px 97px;
   width: 1440px;
   box-sizing: border-box;
 }
-.products .vector {
-  opacity: 0.05;
-  position: absolute;
-  top: -21px;
-  right: -61px;
-  width: 1262px;
-  height: 1261px;
-}
-.products .rectangle-2 {
-  opacity: 0.6;
-  background: #FFFFFF;
-  position: absolute;
-  top: 0px;
-  right: 569px;
-  width: 137px;
-  height: 163px;
-}
-.products .home {
-  margin: 38.5px 0 1.4px 0;
-  display: inline-block;
-  overflow-wrap: break-word;
-  font-family: 'Harmattan';
-  font-weight: 700;
-  font-size: 32px;
-  color: #000000;
-}
-.products .contact-us {
-  margin: 38.5px 87.8px 451px 0;
-  display: inline-block;
-  overflow-wrap: break-word;
-  font-family: 'Harmattan';
-  font-weight: 700;
-  font-size: 32px;
-  color: #000000;
-}
-.products .products-1 {
+
+.carousel {
   position: relative;
-  margin: 38.5px 0 1.4px 0;
-  display: inline-block;
-  overflow-wrap: break-word;
-  font-family: 'Harmattan';
-  font-weight: 700;
-  font-size: 32px;
-  color: #82257E;
-}
-.products .about-us {
-  margin: 38.5px 0 1.4px 0;
-  display: inline-block;
-  overflow-wrap: break-word;
-  font-family: 'Harmattan';
-  font-weight: 700;
-  font-size: 32px;
-  color: #000000;
-}
-.products .rectangle-12 {
-  border-radius: 30px;
-  background: url('assets/images/drawstringbagproduct1.jpg');
-  margin: 17.5px 0 186px 0;
-  width: 871px;
-  height: 341px;
-}
-.products .rectangle-4 {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
   border-radius: 20px;
-  background: url('assets/images/drawstringbagproduct1.jpg');
-  width: 218px;
-  height: 196px;
 }
-.products .rectangle-5 {
-  border-radius: 20px;
-  background: url('assets/images/drawstringbagproduct1.jpg');
-  width: 218px;
-  height: 196px;
-}
-.products .logo-icon-removebg-preview-2 {
-  border-radius: 26px;
-  background: url('../assets/images/logo_icon_removebg_preview_1.jpeg') 50% / cover no-repeat;
-  position: relative;
-  width: 20px;
-  height: 20px;
-}
-.products .rectangle-9 {
-  background: #7F3F96;
-  position: absolute;
-  left: 17px;
-  top: 0px;
-  width: 24px;
-  height: 25px;
-}
-.products .rectangle-10 {
-  background: #7F3F96;
-  position: absolute;
-  left: 31px;
-  top: 0px;
-  width: 24px;
-  height: 25px;
-}
-.products .logo-icon-removebg-preview-3 {
-  border-radius: 26px;
-  background: url('../assets/images/logo_icon_removebg_preview_1.jpeg') 50% / cover no-repeat;
-  position: relative;
-  width: 20px;
-  height: 20px;
-}
-.products .rectangle-11 {
-  background: #7F3F96;
-  position: absolute;
-  left: 24px;
-  top: 0px;
-  width: 24px;
-  height: 25px;
-}
-.products .logo-icon-removebg-preview-4 {
-  border-radius: 26px;
-  background: url('../assets/images/logo_icon_removebg_preview_1.jpeg') 50% / cover no-repeat;
-  position: relative;
-  width: 20px;
-  height: 20px;
-}
-.products .logo-icon-removebg-preview-5 {
-  border-radius: 26px;
-  background: url('../assets/images/logo_icon_removebg_preview_1.jpeg') 50% / cover no-repeat;
-  width: 66px;
-  height: 66px;
-}
-.products .contacts-db-logo-2 {
+
+.carousel-container {
   display: flex;
-  flex-direction: row;
-  width: 318.5px;
-  box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
 }
-.products .xmlid-71 {
-  margin-right: 7.9px;
-  width: 94.9px;
-  height: 94.9px;
+
+.carousel-item {
+  min-width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
 }
-.products .xmlid-48 {
-  margin: 16.5px 0 3.7px 0;
-  width: 215.7px;
-  height: 74.7px;
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
-.products .container {
-  border-radius: 20px;
-  background: url('../assets/images/rectangle_7.jpeg') 50% / cover no-repeat;
-  position: relative;
-  display: flex;
-  padding: 3px 132px 0 0;
-  width: 218px;
-  height: 196px;
-  box-sizing: border-box;
+
+.carousel-button.prev {
+  left: 10px;
 }
-.products .container-1 {
-  margin-right: 30px;
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.tile-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 1057.2px;
-  box-sizing: border-box;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 500px; /* Adjust the width as needed */
 }
-.products .container-2 {
-  border-radius: 20px;
-  background: url('../assets/images/rectangle_8.jpeg') 50% / cover no-repeat;
-  position: relative;
-  display: flex;
-  padding: 3px 146px 0 0;
-  width: 218px;
-  height: 196px;
-  box-sizing: border-box;
-}
-.products .container-3 {
-  margin: 0 0 91px 0.8px;
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  box-sizing: border-box;
-}
-.products .container-4 {
-  position: relative;
+
+.tiles {
   display: flex;
   flex-direction: column;
-  width: 2201px;
-  height: fit-content;
-  box-sizing: border-box;
+  overflow-y: hidden;
+  width: 100%;
 }
-.products .container-5 {
-  border-radius: 30px;
-  background: url('../assets/images/rectangle_12.jpeg');
+
+.tile {
+  flex: 0 0 auto;
+  height: 200px; /* Adjust the height as needed */
+  margin: 10px 0;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  color: white;
   position: relative;
-  padding: 258px 31px 17px 31px;
-  width: 871px;
-  height: 341px;
-  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.5s ease;
 }
-.products .container-6 {
-  display: flex;
-  flex-direction: row;
-  align-self: flex-start;
-  column-gap: 46px;
-  width: 1274px;
-  box-sizing: border-box;
+
+.tile-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-.products .container-7 {
-  border-radius: 20px;
-  background: url('../assets/images/rectangle_6.jpeg') 50% / cover no-repeat;
-  position: relative;
-  padding: 3px 19px 0 19px;
-  width: 218px;
-  height: 196px;
-  box-sizing: border-box;
+
+.tile:hover .tile-content {
+  opacity: 1;
+}
+
+.tile-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.tile-button.up {
+  margin-bottom: 5px;
+}
+
+.tile-button.down {
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .tile-section {
+    max-width: 100%;
+  }
 }
