@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Drawstring Bags</title>
+   
     <link rel="stylesheet" href="assets/styles/main.css"/>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Moderat&display=swap" rel="stylesheet">
@@ -64,47 +65,112 @@
     <!-- Content for Page 2 (Products Page) -->
     <div id="page2" class="page">
       <div class="products">
-        <div class="carousel">
-          <div class="carousel-container">
-            <div class="carousel-item active" style="background-image: url('assets/images/drawstringbagproduct1.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('assets/images/drawstringbagproduct2.jpg');"></div>
-            <div class="carousel-item" style="background-image: url('assets/images/drawstringbagproduct3.jpg');"></div>
-          </div>
-          <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
-          <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+        <div class="gallery" onclick="openModal('Non-woven material Drawstring bag', 120)">
+            <div class="content">
+                <img src="assets/images/drawstringbagproduct5.jpg" alt="Non-woven material Drawstring bag">
+                <h3>Non-woven material</h3>
+                <p>Durable non-woven drawstring bag for everyday use.</p>
+                <h6> KES 120.00</h6>
+                <ul>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <button class="buy-1">Buy now</button>
+            </div>
+    
+            <div class="content" onclick="openModal('Mesh material Drawstring bag', 120)">
+                <img src="assets/images/drawstringbagproduct6.jpg" alt="Mesh material Drawstring bag">
+                <h3>Mesh material</h3>
+                <p>Breathable mesh drawstring bag perfect for gym and sports.</p>
+                <h6> KES 140.00</h6>
+                <ul>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <button class="buy-2">Buy now</button>
+            </div>
+    
+            <div class="content" onclick="openModal('Customized Design Drawstring bag', 120)">
+                <img src="assets/images/drawstringbagproduct3.jpg" alt="Customized Design Drawstring bag">
+                <h3>Customized Design</h3>
+                <p>Personalize your style with a customized drawstring bag.</p>
+                <h6> KES 200.00</h6>
+                <ul>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <button class="buy-3">Buy now</button>
+            </div>
+    
+            <div class="content" onclick="openModal('Polyester material Drawstring bag', 120)">
+                <img src="assets/images/drawstringbagproduct2.jpg" alt="Polyester material Drawstring bag">
+                <h3>Polyester material</h3>
+                <p>Lightweight and sturdy polyester drawstring bag.</p>
+                <h6> KES 100.00</h6>
+                <ul>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <button class="buy-4">Buy now</button>
+            </div>
+    
+            <div class="content" onclick="openModal('Cotton material Drawstring bag', 120)">
+                <img src="assets/images/drawstringbagproduct1.jpg" alt="Cotton material Drawstring bag">
+                <h3>Cotton material</h3>
+                <p>Eco-friendly cotton drawstring bag for a natural look.</p>
+                <h6> KES 100.00</h6>
+                <ul>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <button class="buy-5">Buy now</button>
+            </div>
+    
+            <div class="content" onclick="openModal('Ankara / Ethnic Design Drawstring bag', 120)">
+                <img src="assets/images/drawstringbagproduct4.jpg" alt="Ankara / Ethnic Design Drawstring bag">
+                <h3>Ankara / Ethnic Design</h3>
+                <p>Vibrant Ankara drawstring bag with ethnic designs.</p>
+                <h6> KES 100.00</h6>
+                <ul>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star checked"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                </ul>
+                <button class="buy-6">Buy now</button>
+            </div>
         </div>
-        
-        <div class="tile-section">
-          <button class="tile-button up" onclick="moveTiles(-1)">&#9650;</button>
-          <div class="tiles">
-            <div class="tile" style="background-image: url('assets/images/drawstringbagproduct4.jpg');">
-              <div class="tile-content">
-                <h2>Tile 1</h2>
-                <p>Description for tile 1.</p>
-              </div>
-            </div>
-            <div class="tile" style="background-image: url('assets/images/drawstringbagproduct5.jpg');">
-              <div class="tile-content">
-                <h2>Tile 2</h2>
-                <p>Description for tile 2.</p>
-              </div>
-            </div>
-            <div class="tile" style="background-image: url('assets/images/drawstringbagproduct6.jpg');">
-              <div class="tile-content">
-                <h2>Tile 3</h2>
-                <p>Description for tile 3.</p>
-              </div>
-            </div>
-            <!-- Add more tiles as needed -->
-          </div>
-          <button class="tile-button down" onclick="moveTiles(1)">&#9660;</button>
-        </div>
-      </div>
-          
-        
-          <!-- Add more tiles as needed -->
     </div>
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalProductName">Product Name</h2>
+        <p id="modalProductDescription">Product Description</p>
+        <h6 id="modalProductPrice">KES 0.00</h6>
+        <form>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+          <button type="button" class="checkout-btn">Checkout</button>
+        </form>
       </div>
+    </div>
+    
        <!-- Content for Page 3 (About us Page) -->
        <div id="page3" class="page">
             <h2>Welcome to the Home Page</h2>
@@ -148,7 +214,8 @@
       </footer>
       <script src="assets/scripts/main.js"></script>
       <script src="assets/scripts/Chatbot.js"></script>
-     
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
       
 </body>
 </html>
