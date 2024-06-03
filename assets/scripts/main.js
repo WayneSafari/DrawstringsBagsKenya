@@ -22,7 +22,7 @@ window.onload = function() {
 
   container1.style.display = 'block'; // Show the first container initially
 
-  setInterval(() => {
+  const toggleContainers = () => {
       if (container1.style.display === 'block') {
           container1.style.display = 'none';
           container2.style.display = 'block';
@@ -30,8 +30,14 @@ window.onload = function() {
           container1.style.display = 'block';
           container2.style.display = 'none';
       }
-  }, 15000); // 15 seconds
+  };
+
+  setInterval(toggleContainers, 15000); // 15 seconds
+
+  container1.addEventListener('click', toggleContainers);
+  container2.addEventListener('click', toggleContainers);
 };
+
 // scripts.js
 
 function openModal(imageSrc, title, price) {
@@ -58,3 +64,9 @@ window.onclick = function(event) {
   }
 }
 
+document.getElementById('contact-button').addEventListener('click', function() {
+  const phoneNumber = '254706890007'; // Replace with your phone number
+  const message = 'Hello, tell me more about drawstring bags';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.location.href = whatsappUrl;
+});
