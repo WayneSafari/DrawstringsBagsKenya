@@ -1,6 +1,6 @@
 function showPage(pageName) {
     // Hide all pages
-    var pages = document.querySelectorAll('page');
+    var pages = document.querySelectorAll('.page');
     pages.forEach(function(page) {
       page.style.display = 'none';
     });
@@ -16,6 +16,22 @@ function showPage(pageName) {
 // Show the home page by default
 showPage('page1');
 
+window.onload = function() {
+  const container1 = document.getElementById('container1');
+  const container2 = document.getElementById('container2');
+
+  container1.style.display = 'block'; // Show the first container initially
+
+  setInterval(() => {
+      if (container1.style.display === 'block') {
+          container1.style.display = 'none';
+          container2.style.display = 'block';
+      } else {
+          container1.style.display = 'block';
+          container2.style.display = 'none';
+      }
+  }, 15000); // 15 seconds
+};
 // scripts.js
 
 function openModal(imageSrc, title, price) {
@@ -42,19 +58,3 @@ window.onclick = function(event) {
   }
 }
 
-window.onload = function() {
-  const container1 = document.getElementById('container1');
-  const container2 = document.getElementById('container2');
-
-  container1.style.display = 'block'; // Show the first container initially
-
-  setInterval(() => {
-      if (container1.style.display === 'block') {
-          container1.style.display = 'none';
-          container2.style.display = 'block';
-      } else {
-          container1.style.display = 'block';
-          container2.style.display = 'none';
-      }
-  }, 15000); // 15 seconds
-};

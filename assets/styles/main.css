@@ -245,9 +245,7 @@ button:hover {
     padding: 20px;
   }
   /* Show only the content of the home page by default */
-  #page1 {
-    display: block;
-  }
+
   .home .rectangle-2 {
     opacity: 0.6;
     background: #000000;
@@ -543,7 +541,7 @@ button {
 #page3{
   display: block;
 }
-.container {
+.containerr {
   display: none;
   width: 80%;
   max-width: 800px;
@@ -554,7 +552,7 @@ button {
   border-radius: 8px;
 }
 
-.container img {
+.containerr-img {
   width: 100%;
   height: auto;
   border-radius: 8px;
