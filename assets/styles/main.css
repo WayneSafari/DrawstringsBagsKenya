@@ -213,6 +213,7 @@ button:hover {
   font-weight: bold;
   position: relative;
   font-size: medium;
+  text-decoration: none;
 }
 
 /* Ensure equal spacing between links */
@@ -232,11 +233,13 @@ button:hover {
   border-radius: 5px; /* Rounded corners */
   transition: height 0.3s; /* Smooth transition for the height property */
   z-index: -1; /* Ensure the pseudo-element is behind the link text */
+  text-decoration: none;
 }
 
 /* Increase height on hover */
 .navbar a:hover::before {
   height: 100%; /* Increase the height to cover the link */
+  text-transform: uppercase;
 }
   
  /* Style the content for each page */
@@ -616,13 +619,13 @@ a {
   font-size: larger;
 }
 
-a:hover {
+.contact-containe a:hover {
   text-decoration: underline;
 }
 
 button {
   width: auto;
-  background-color: #25d366;
+  background-color: #621B5F;;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -633,5 +636,5 @@ button {
 }
 
 button:hover {
-  background-color: #1ebe57;
+  background-color: #381036;;
 }
