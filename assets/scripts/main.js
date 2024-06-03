@@ -1,6 +1,6 @@
 function showPage(pageName) {
     // Hide all pages
-    var pages = document.querySelectorAll('.page');
+    var pages = document.querySelectorAll('page');
     pages.forEach(function(page) {
       page.style.display = 'none';
     });
@@ -16,31 +16,45 @@ function showPage(pageName) {
 // Show the home page by default
 showPage('page1');
 
-// Get the modal
-var modal = document.getElementById("productModal");
+// scripts.js
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+function openModal(imageSrc, title, price) {
+  document.getElementById('modal').style.display = 'block';
+  document.getElementById('modal-image').src = imageSrc;
+  document.getElementById('modal-title').innerText = title;
+  document.getElementById('modal-price').innerText = `KES${price.toFixed(2)}`;
 
-// Open the modal with product details
-function openModal(productName, productPrice) {
-  document.getElementById("modalProductName").innerText = productName;
-  document.getElementById("modalProductDescription").innerText = "Description for " + productName;
-  document.getElementById("modalProductPrice").innerText = "$" + productPrice.toFixed(2);
-  modal.style.display = "block";
-  document.body.style.overflow = "hidden"; // Disable background scroll
+  // Blur background
+  document.querySelector('.products').style.filter = 'blur(5px)';
 }
 
-// Close the modal when the user clicks on <span> (x)
-span.onclick = function() {
-  modal.style.display = "none";
-  document.body.style.overflow = "auto"; // Enable background scroll
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+
+  // Unblur background
+  document.querySelector('.products').style.filter = 'none';
 }
 
-// Close the modal when the user clicks anywhere outside of the modal
+// Close the modal if clicked outside of the modal content
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto"; // Enable background scroll
+  if (event.target === document.getElementById('modal')) {
+      closeModal();
   }
 }
+
+window.onload = function() {
+  const container1 = document.getElementById('container1');
+  const container2 = document.getElementById('container2');
+
+  container1.style.display = 'block'; // Show the first container initially
+
+  setInterval(() => {
+      if (container1.style.display === 'block') {
+          container1.style.display = 'none';
+          container2.style.display = 'block';
+      } else {
+          container1.style.display = 'block';
+          container2.style.display = 'none';
+      }
+  }, 15000); // 15 seconds
+};

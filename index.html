@@ -65,7 +65,7 @@
     <!-- Content for Page 2 (Products Page) -->
     <div id="page2" class="page">
       <div class="products">
-        <div class="gallery" onclick="openModal('Non-woven material Drawstring bag', 120)">
+        <div class="gallery" onclick="openModal('assets/images/drawstringbagproduct5.jpg','Non-woven material Drawstring bag', 120)">
             <div class="content">
                 <img src="assets/images/drawstringbagproduct5.jpg" alt="Non-woven material Drawstring bag">
                 <h3>Non-woven material</h3>
@@ -81,7 +81,7 @@
                 <button class="buy-1">Buy now</button>
             </div>
     
-            <div class="content" onclick="openModal('Mesh material Drawstring bag', 120)">
+            <div class="content" onclick="openModal('assets/images/drawstringbagproduct6.jpg' ,'Mesh material Drawstring bag', 140)">
                 <img src="assets/images/drawstringbagproduct6.jpg" alt="Mesh material Drawstring bag">
                 <h3>Mesh material</h3>
                 <p>Breathable mesh drawstring bag perfect for gym and sports.</p>
@@ -96,7 +96,7 @@
                 <button class="buy-2">Buy now</button>
             </div>
     
-            <div class="content" onclick="openModal('Customized Design Drawstring bag', 120)">
+            <div class="content" onclick="openModal('assets/images/drawstringbagproduct3.jpg', 'Customized Design Drawstring bag', 200)">
                 <img src="assets/images/drawstringbagproduct3.jpg" alt="Customized Design Drawstring bag">
                 <h3>Customized Design</h3>
                 <p>Personalize your style with a customized drawstring bag.</p>
@@ -111,7 +111,7 @@
                 <button class="buy-3">Buy now</button>
             </div>
     
-            <div class="content" onclick="openModal('Polyester material Drawstring bag', 120)">
+            <div class="content" onclick="openModal('assets/images/drawstringbagproduct2.jpg', 'Polyester material Drawstring bag', 100)">
                 <img src="assets/images/drawstringbagproduct2.jpg" alt="Polyester material Drawstring bag">
                 <h3>Polyester material</h3>
                 <p>Lightweight and sturdy polyester drawstring bag.</p>
@@ -126,7 +126,7 @@
                 <button class="buy-4">Buy now</button>
             </div>
     
-            <div class="content" onclick="openModal('Cotton material Drawstring bag', 120)">
+            <div class="content" onclick="openModal('assets/images/drawstringbagproduct1.jpg', 'Cotton material Drawstring bag', 100)">
                 <img src="assets/images/drawstringbagproduct1.jpg" alt="Cotton material Drawstring bag">
                 <h3>Cotton material</h3>
                 <p>Eco-friendly cotton drawstring bag for a natural look.</p>
@@ -141,7 +141,7 @@
                 <button class="buy-5">Buy now</button>
             </div>
     
-            <div class="content" onclick="openModal('Ankara / Ethnic Design Drawstring bag', 120)">
+            <div class="content" onclick="openModal('assets/images/drawstringbagproduct4.jpg', 'Ankara / Ethnic Design Drawstring bag', 100)">
                 <img src="assets/images/drawstringbagproduct4.jpg" alt="Ankara / Ethnic Design Drawstring bag">
                 <h3>Ankara / Ethnic Design</h3>
                 <p>Vibrant Ankara drawstring bag with ethnic designs.</p>
@@ -157,26 +157,49 @@
             </div>
         </div>
     </div>
-    <div id="productModal" class="modal">
+    <div id="modal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modalProductName">Product Name</h2>
-        <p id="modalProductDescription">Product Description</p>
-        <h6 id="modalProductPrice">KES 0.00</h6>
-        <form>
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img id="modal-image" src="" alt="Product Image">
+          <h3 id="modal-title">Product Title</h3>
+          <p id="modal-price">KES 0.00</p>
           <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
-          <button type="button" class="checkout-btn">Checkout</button>
-        </form>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+          <button class="checkout-button">Checkout</button>
       </div>
-    </div>
+  </div>
     
        <!-- Content for Page 3 (About us Page) -->
        <div id="page3" class="page">
-            <h2>Welcome to the Home Page</h2>
-            <p>This is the content of the home page.</p>
-            <p>You can add whatever content you want here.</p>
+        <div class="container" id="container1" onload="">
+          <h1>Our Mission</h1>
+          <img src="https://via.placeholder.com/800x400" alt="Our Mission">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu.</p>
+      </div>
+      <div class="container" id="container2">
+          <h1>Our Vision</h1>
+          <img src="https://via.placeholder.com/800x400" alt="Our Vision">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu.</p>
+      </div>
        </div>
+       <script>
+        window.onload = function() {
+            const container1 = document.getElementById('container1');
+            const container2 = document.getElementById('container2');
+
+            container1.style.display = 'block'; // Show the first container initially
+
+            setInterval(() => {
+                if (container1.style.display === 'block') {
+                    container1.style.display = 'none';
+                    container2.style.display = 'block';
+                } else {
+                    container1.style.display = 'block';
+                    container2.style.display = 'none';
+                }
+            }, 15000); // 15 seconds
+        };
+    </script>
 
     <!-- Content for Page 4 (Contact us Page) -->
         <div id="page4" class="page">
@@ -214,7 +237,7 @@
       </footer>
       <script src="assets/scripts/main.js"></script>
       <script src="assets/scripts/Chatbot.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
 
       
 </body>

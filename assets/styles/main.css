@@ -477,36 +477,29 @@ button {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-/* Modal Styles */
+/* Modal styling */
 .modal {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
-  z-index: 1;
-  padding-top: 60px;
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: auto;
+  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  animation: animatetop 0.4s;
+  width: 60%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
   font-family: "Moderat", sans-serif;
-}
-
-@keyframes animatetop {
-  from {top: -300px; opacity: 0} 
-  to {top: 0; opacity: 1}
 }
 
 .close {
@@ -514,6 +507,9 @@ button {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 .close:hover,
@@ -523,18 +519,43 @@ button {
   cursor: pointer;
 }
 
-.checkout-btn {
-  background-color: #99B1E7;
+#modal-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.checkout-button {
+  background-color: #621B5F;
   color: white;
-  padding: 10px;
   border: none;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 18px;
   border-radius: 5px;
-  margin-top: 10px;
 }
 
-.checkout-btn:hover {
-  background-color: #577ac6;
+.checkout-button:hover {
+  background-color: #340e32;
+}
+#page3{
+  display: block;
+}
+.container {
+  display: none;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
