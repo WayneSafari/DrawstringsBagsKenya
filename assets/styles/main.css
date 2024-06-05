@@ -242,7 +242,7 @@ button:hover {
   text-transform: uppercase;
 }
   
- /* Style the content for each page */
+
 .page {
     display: none; /* Hide all pages by default */
     padding: 20px;
@@ -619,7 +619,7 @@ a {
   font-size: larger;
 }
 
-.contact-containe a:hover {
+.contact-container a:hover {
   text-decoration: underline;
 }
 
